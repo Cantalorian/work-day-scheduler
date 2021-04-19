@@ -18,25 +18,84 @@ var openHeader = function () {
 }
 setInterval(openHeader, 1000);
 
+// display last
+function displayLast() {
+  var nineSaved = localStorage.getItem("nineInput");
+  var tenSaved = localStorage.getItem("tenInput");
+  var elevenSaved = localStorage.getItem("elevenInput");
+  var twelveSaved = localStorage.getItem("twelveInput");
+  var oneSaved = localStorage.getItem("oneInput");
+  var twoSaved = localStorage.getItem("twoInput");
+  var threeSaved = localStorage.getItem("threeInput");
+  var fourSaved = localStorage.getItem("fourInput");
+  var fiveSaved = localStorage.getItem("fiveInput");
+  
+  nineInput.textContent = nineSaved;
+  tenInput.textContent = tenSaved;
+  elevenInput.textContent = elevenSaved;
+  twelveInput.textContent = twelveSaved;
+  oneInput.textContent = oneSaved;
+  twoInput.textContent = twoSaved;
+  threeInput.textContent = threeSaved;
+  fourInput.textContent = fourSaved;
+  fiveInput.textContent = fiveSaved; 
+};
+
+displayLast();
+
 // focus element
+function focus() {
+  document.querySelector("textarea").focus();
+};
 
 // local storage
 $(".saveBtn").on("click", function() {
-  console.log("I work")
+  // 9am
+  var nine = nineInput.value;
+  nineInput.textContent = nine;
+  localStorage.setItem("nineInput", nine);
+  console.log(nine)
+  // 10am
+  var ten = tenInput.value;
+  tenInput.textContent = ten;
+  localStorage.setItem("tenInput", ten);
+  console.log(ten)
+  // 11am
+  var eleven = elevenInput.value;
+  elevenInput.textContent = eleven;
+  localStorage.setItem("elevenInput", eleven);
+  console.log(eleven)
+  // 12am
+  var twelve = twelveInput.value;
+  twelveInput.textContent = twelve;
+  localStorage.setItem("twelveInput", twelve);
+  console.log(twelve)
+  // 1pm
+  var one = oneInput.value;
+  oneInput.textContent = one;
+  localStorage.setItem("oneInput", one);
+  console.log(one)
+  // 2pm
+  var two = twoInput.value;
+  twoInput.textContent = two;
+  localStorage.setItem("twoInput", two);
+  console.log(two)
+  // 3pm
+  var three = threeInput.value;
+  threeInput.textContent = three;
+  localStorage.setItem("threeInput", three);
+  console.log(three)
+  // 4pm
+  var four = fourInput.value;
+  fourInput.textContent = four;
+  localStorage.setItem("fourInput", four);
+  console.log(four)
+  // 5pm
+  var five = fiveInput.value;
+  fiveInput.textContent = five;
+  localStorage.setItem("fiveInput", five);
+  console.log(five)
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // dynamic color change for time blocks
