@@ -1,6 +1,6 @@
 # work-day-scheduler
 
-\*Work Day Scheduler
+*Work Day Scheduler
 
 -- Created a dynamic app that will change color to simply track the progess of your day.
 
